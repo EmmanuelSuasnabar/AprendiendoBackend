@@ -1,4 +1,7 @@
-const name = 'Emmanuel'
-const edad = '33'
+function saludar (nombre,edad) {
+    console.log('hola soy '+ nombre);
+    console.log(`tengo ${edad} años`)
 
-console.log ('name')
+}
+
+saludar("Emmanuel",33)

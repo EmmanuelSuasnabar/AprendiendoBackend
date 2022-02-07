@@ -1,17 +1,30 @@
-class Programador {
+class Usuario{
 
-    constructor(nombre,edad){
-
+    constructor(nombre,apellido,libros,mascotas){
+       
         this.nombre = nombre;
-        this.edad = edad;
+        this.apellido = apellido;
+        this.libros = libros;
+        this.mascotas = mascotas;
 
     }
-    //metodo   
-    saludo (){
-        console.log("hola soy "+this.nombre, "y tengo "+this.edad)
+    getFullName() {
+        console.log(`${this.nombre} ${this.apellido}`)
     }
+    countMascotas(){
+        console.log(3)
+    }
+    getBookNames(){
+        console.log(this.libros)
+    }
+    
+    
+
 };
 
-const programador1 = new Programador("Emmanuel", 29);
-programador1.saludo();
-console.log(programador1);
+const Usuario1 = new Usuario("Emmanuel", "Suasnabar", [{nombre:"cuentos de la selva",autor:"Horacio Quiroga"},{nombre:"La divina comedia",autor:"Dante Alighieri"},{nombre:"Ficciones",autor:"Jorge Luis Borges"}],["Firulais","Fatiga","Huesos"]);
+
+console.log(Usuario1);
+Usuario1.getFullName();
+Usuario1.countMascotas()
+Usuario1.getBookNames()
